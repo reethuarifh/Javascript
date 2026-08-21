@@ -11,9 +11,12 @@ name = 'farhana';
 console.log(name); //output: farhana, here the value was redeclared
 
 let city = 'hyderabad'; //it cannot be redeclared , here the value can be re-assigned//
+//let city = 'gdk'; // here identifier with name city was already declared so again we cannot redeclared the identifier with same name 'city' 
+//it shows error as SyntaxError: Identifier 'city' has already been declared
 city = 'gdk';
 console.log(city);
-//let city = 'gdk'; // here identifier with name city was already declared so again we cannot redeclared the identifier with same name city 
 
-
-const country = 'india'; //it cannot be redeclared //
+const country = 'india'; //it cannot be redeclared and cannot be re-assigned//
+const country = 'usa'; // it cannot be redeclared
+country = 'saudi'; // it cannot be re-assigned
+console.log(country);
