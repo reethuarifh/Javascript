@@ -29,4 +29,4 @@ const products = [
     }
 ];
 console.log(products[1]); // output: {name: "Samsung", price: 59999}
-console.log(products[0].name); // output: iphone
+console.log(products[0].name, products[1].price); // output: iphone, 59999
