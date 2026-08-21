@@ -16,6 +16,10 @@ let city = 'hyderabad'; //it cannot be redeclared , here the value can be re-ass
 city = 'gdk';
 console.log(city);
 
+// Template literals
+let fname = 'Reethu';
+console.log("Hello" + )
+
 const country = 'india'; //it cannot be redeclared and cannot be re-assigned//
 const country = 'usa'; // it cannot be redeclared
 country = 'saudi'; // it cannot be re-assigned
