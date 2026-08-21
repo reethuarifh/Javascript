@@ -18,7 +18,8 @@ console.log(city);
 
 // Template literals
 let fname = 'Reethu';
-console.log("Hello" + )
+console.log("Hello " + fname);
+console.log(`Hello ${fname}`); // this is template literals
 
 const country = 'india'; //it cannot be redeclared and cannot be re-assigned//
 const country = 'usa'; // it cannot be redeclared
