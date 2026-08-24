@@ -83,3 +83,5 @@ const validate = function(email){
    }     
 }
 console.log(validate("reethufarhana201@gmail.com"));//output: validate email
+
+//EXAMPLE:8 - Function expressions can be passed around, this is known as callback function.
