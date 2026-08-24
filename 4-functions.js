@@ -55,4 +55,31 @@ function checkAccess(isLoggedIn){
 const access = checkAccess(true);
 console.log(access); // output: access success
 
+//EXAMPLE:6
 
+//function expression. function can be stored in a variable
+
+const greet = function(){
+  console.log('good morning');
+}
+greet();//output: good morning
+
+//function expression with parameters.
+
+const calculatePrice = function(price,quantity){
+  return price*quantity;
+}
+const total= calculatePrice(49,6);
+console.log(total);//output: 294
+
+//EXAMPLE:7 - function expression
+
+const validate = function(email){
+  if(email.includes('@')){
+    return "validate email";
+  }
+   else {
+     return "invalid email"
+   }     
+}
+console.log(validate("reethufarhana201@gmail.com"));//output: validate email
