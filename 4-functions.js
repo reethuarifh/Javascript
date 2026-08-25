@@ -85,3 +85,33 @@ const validate = function(email){
 console.log(validate("reethufarhana201@gmail.com"));//output: validate email
 
 //EXAMPLE:8 - Function expressions can be passed around, this is known as callback function.
+
+const greet = function(){
+  console.log('hi, good morning')
+}
+const greetings = function(message){
+  message();
+}
+greetings(greet); // output: hi, good morning
+
+------------------------------------------------------
+
+const dataSuccess = function(){
+  console.log("data success");
+}
+const dataLoading = function(loading){
+  console.log("data loading");
+  loading();
+}
+dataLoading(dataSuccess);// output: data loading data success
+
+//EXAMPLE:9 - call back function with passing parameters
+
+const greetUser = function(name,greet){
+  console.log(`hello, ${name}`);
+  greet();
+}
+const greeting = function(){
+  console.log("good morning");
+}
+greetUser('reethu',greeting);// output: hello, reethu good morning
