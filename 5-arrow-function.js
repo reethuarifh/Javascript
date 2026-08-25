@@ -38,3 +38,67 @@ const userLogin = (userName, password) =>{
 }
 console.log(userLogin("reethu", 12345)); // output: Login sucess
 
+//The 5 patterns should memorize in arrow function
+
+//Pattern 1 — No parameters
+
+const greet=()=>{
+  console.log("good morning");
+}
+greet();//output:good morning
+
+const greeting=()=>{
+  return "good afternoon";
+}
+console.log(greeting());//output:good afternoon
+
+//Pattern 2 — One parameter
+
+const user=(name)=>{
+  console.log(`good morning ${name}`);
+}
+user("reethu");//output: good morning reethu
+
+const userName=(names)=>{
+  return `good afternoon ${names}`;
+}
+console.log(userName("Arif"));//output: good afternoon Arif
+
+//Pattern 3 — Multiple parameters
+
+const adding=(a,b)=>{
+  console.log(a*b);
+}
+adding(2,4); // output: 8
+
+const addNum=(x,y)=>{
+  return x*y;
+}
+console.log(addNum(3,5)); // output: 15
+
+const validateMail=(mailId, password)=>{
+  if(mailId && password){
+    return "login success";
+  }
+  else {
+    return "invalid"
+  }
+}
+console.log(validateMail("ARF", 12345)); // output: login success
+
+//Pattern 4 — Implicit return
+
+const subNum = (a,b) => a-b;
+console.log(subNum(6,4)); // output: 2
+
+//Pattern 5 — Object return
+
+const createUser = (name, age, city) => ({
+    name,
+    age,
+    city
+});
+const userdetails = createUser("Arif", 36, "Hyderabad");
+
+console.log(userdetails); // output: { name: 'Arif', age: 36, city: 'Hyderabad' }
+
