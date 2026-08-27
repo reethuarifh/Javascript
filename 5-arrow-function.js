@@ -99,6 +99,5 @@ const createUser = (name, age, city) => ({
     city
 });
 const userdetails = createUser("Arif", 36, "Hyderabad");
-
 console.log(userdetails); // output: { name: 'Arif', age: 36, city: 'Hyderabad' }
 
