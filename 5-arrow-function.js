@@ -101,3 +101,16 @@ const createUser = (name, age, city) => ({
 const userdetails = createUser("Arif", 36, "Hyderabad");
 console.log(userdetails); // output: { name: 'Arif', age: 36, city: 'Hyderabad' }
 
+//Real-time API data transformation
+const userDetails = {
+  firstName: 'Reethu',
+  lastName: 'Farhana',
+  age: 31
+}
+
+const userInfo = (user)=>({
+  FullName:`${user.firstName} ${user.lastName}`,
+  Age: `${user.age}`
+})
+
+console.log(userInfo(userDetails)); //output: { FullName: 'Reethu Farhana', Age: '31' }
