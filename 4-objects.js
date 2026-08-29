@@ -123,5 +123,44 @@ const user2 = createUser("Arifh", 28);
 console.log(user1); //output: { name: 'Reethu', age: 22 }
 console.log(user2); //output: { name: 'Arifh', age: 28 }
 
+//Object Creation Methods
+
+//1. Object literal
+
+const userName = {
+    name: "reethu",
+    age: 31
+}
+console.log(userName); // output: { name: 'reethu', age: 31 }
+
+//2. Empty object + properties. Useful for dynamic construction.
+
+const userDetails = {}
+userDetails.name="farhana",
+userDetails.age=31
+console.log(userDetails); // output: { name: 'farhana', age: 31 }
+console.log(userDetails.name); //output: reethu
+
+//3. Factory function. A factory function is a regular JavaScript function that creates and returns a new object without using the new keyword.
+
+const details=(name, age)=>{
+    return{
+        name,
+        age
+    }
+}
+console.log(details("Arifh", 31)); // output: { name: 'Arifh', age: 31 }
+
+//4. Constructor / class. A class is a blueprint, and a constructor is a special method used to initialize each object created from that class.
+
+class User {
+    constructor(){
+        console.log("success")
+    }
+}
+const user1 = new User(); // output: success
+
+
+
 
 
