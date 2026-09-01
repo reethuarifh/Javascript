@@ -27,3 +27,30 @@ const admin1 = new Admin("Farhana", "Frontend Developer")
 console.log(admin1.login()); //output: Reethu logged in
 console.log(admin.logout()); //output: Reethu logged out
 admin.deleteUser(); //output: User deleted
+
+//Inheritance with Constructors
+class User{
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    login(){
+        return `login success`;
+    }
+    logout() {
+        return `logout success`;
+    }
+}
+
+class Admin extends User {
+    constructor(name, email, domain) {
+        super(name, email);
+        this.domain = domain;
+    }
+    delUser(){
+        return `deleted user`;
+    }
+}
+const admin = new Admin("Arifh","arifhalam@gmail.com","Software Engineer");
+console.log(admin.login()); // output: login success
+console.log(admin.email); // output: arifhalam@gmail.com
