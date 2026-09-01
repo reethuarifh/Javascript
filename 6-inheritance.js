@@ -54,3 +54,21 @@ class Admin extends User {
 const admin = new Admin("Arifh","arifhalam@gmail.com","Software Engineer");
 console.log(admin.login()); // output: login success
 console.log(admin.email); // output: arifhalam@gmail.com
+
+//Calling Parent Method with super.method().Suppose the child overrides the parent's method but still wants the parent's behavior.
+
+class User {
+    login() {
+        console.log("login success")
+    }
+}
+
+class Admin extends User {
+    login(){
+        super.login();
+        console.log("Admin logged success");
+    }
+}
+
+const admin = new Admin();
+admin.login(); //output: login success ,Admin logged success
