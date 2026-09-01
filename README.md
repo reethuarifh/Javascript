@@ -44,3 +44,55 @@
 22. super()
    ↓
 23. Method Overriding
+24. ARRAYS + OBJECTS
+       ↓
+ARRAY METHODS
+       ↓
+CALLBACK FUNCTIONS
+       ↓
+map()
+filter()
+forEach()
+reduce()
+       ↓
+API DATA
+       ↓
+DOM / UI
+       ↓
+REACT
+25. DOM
+ ↓
+getElementById()
+querySelector()
+textContent
+innerHTML
+classList
+createElement()
+addEventListener()
+26. Synchronous JS
+      ↓
+setTimeout
+      ↓
+Callbacks
+      ↓
+Promises
+      ↓
+async / await
+      ↓
+fetch()
+      ↓
+API calls
+27. Then Modern JavaScript / ES6+
+let / const
+Template literals
+Destructuring
+Spread / Rest
+Default parameters
+Arrow functions
+Array methods
+Optional chaining
+Nullish coalescing
+Modules
+Promises
+async/await
+
