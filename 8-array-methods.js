@@ -94,3 +94,23 @@ const result = users.findIndex(user=>user.name==="Arifh");
 console.log(result)// output: 2
 
 //6. some() — Does At Least One Match?.  checks if at least one item passes a condition.
+const age = [10,15,18,20,25];
+const adult = age.some(num=>num>=18);
+console.log(adult)// output: true
+
+//7. every() checks if all items pass a condition.
+const age = [10,15,18,20,25];
+const adult = age.every(num=>num>=18);
+console.log(adult)// output: false
+
+//8. reduce(). Combines all array items into a single final value (like a total sum).
+const numbers = [10,15,18,20,25];
+// Add , '0' at the end to set a safe starting point
+const result = numbers.reduce((sum, number) => sum + number, 0);
+console.log(result) // output: 88
+
+//9. includes() — Check Whether a Value Exists. Checks if a specific value exists in a simple array (returns true or false).
+const skills = ["HTML", "CSS", "Javascript", "Bootstrap", "ReactJS"];
+console.log(skills.includes("html")); // output: false
+console.log(skills.includes("CSS")); // output: true
+
