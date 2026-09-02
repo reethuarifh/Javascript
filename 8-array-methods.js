@@ -6,15 +6,15 @@
 //├── filter()
 //├── find()
 //├── findIndex()
-// ├── some()
-// ├── every()
-// ├── reduce()
-// ├── includes()
-// ├── indexOf()
-// ├── sort()
-// ├── reverse()
-// ├── slice()
-// └── splice()
+//├── some()
+//├── every()
+//├── reduce()
+//├── includes()
+//├── indexOf()
+//├── sort()
+//├── reverse()
+//├── slice()
+//└── splice()
 
 //1.foreach() --> Standard Looping
 //Executes a callback function once for every element. It does not generate a new array. It is strictly used to trigger actions (like executing a DOM change or printing logs).
@@ -56,3 +56,41 @@ const result = users.map(user=>({
 
 console.log(result); //output: [{ SNo: 1, profile: 'Reethu' }, { SNo: 2, profile: 'Farhana' }, { SNo: 3, profile: 'Arifh' }]
 
+//3.filter() — The Cleaner. 
+//Loops through your items and keeps only the ones that match a specific condition.
+
+const numbers = [5,10,15,20,25];
+const result = numbers.filter(num=>num>=15); //checking greaterthan or equals to
+console.log(result); // output: [ 15, 20, 25 ]
+
+//4.find() Searching & Checking Elements
+//find()      → gives the object
+//Methods used to locate items or check if data meets requirements.
+//find() returns the first actual item that passes your condition.
+
+const users = [
+    { id: 1, name: "Reethu", age: 31 },
+    { id: 2, name: "Farhana", age: 32 },
+    { id: 3, name: "Arifh", age: 36 }
+];
+
+const test = users.find(user=>user.age===30); // check if data meets requirements
+console.log(test)// output: undefined
+
+const result = users.find(user=>user.name==="Reethu");
+console.log(result)// output: { id: 1, name: 'Reethu', age: 31 }
+
+//5. findIndex() — Find Position. findIndex() → gives the position
+const users = [
+    { id: 1, name: "Reethu", age: 31 },
+    { id: 2, name: "Farhana", age: 32 },
+    { id: 3, name: "Arifh", age: 36 }
+];
+
+const test = users.findIndex(user=>user.age=30); // check if data meets requirements
+console.log(test)// output: 0
+
+const result = users.findIndex(user=>user.name==="Arifh");
+console.log(result)// output: 2
+
+//6. some() — Does At Least One Match?.  checks if at least one item passes a condition.
