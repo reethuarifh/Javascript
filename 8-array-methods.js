@@ -114,3 +114,4 @@ const skills = ["HTML", "CSS", "Javascript", "Bootstrap", "ReactJS"];
 console.log(skills.includes("html")); // output: false
 console.log(skills.includes("CSS")); // output: true
 
+//10.indexOf() used to find the position (index) of a specific element in an array.It searches the array from left to right and returns the index number of the first match it finds. If it cannot find the item, it returns -1.
