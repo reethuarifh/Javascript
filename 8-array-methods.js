@@ -38,8 +38,9 @@ const users = [
     { id: 3, name: "Arifh", age: 36 }
 ];
 const names = users.map(user=>user.name);
-const details = users.map(user=>`${user.name}'s age is ${user.age}`);
 console.log(names); //output: [ 'Reethu', 'Farhana', 'Arifh' ]
+
+const details = users.map(user=>`${user.name}'s age is ${user.age}`);
 console.log(details); // output: [ "Reethu's age is 31", "Farhana's age is 32", "Arifh's age is 36" ]
 
 //map() Returning Objects
