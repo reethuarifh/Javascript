@@ -116,3 +116,20 @@ console.log(skills.includes("html")); // output: false
 console.log(skills.includes("CSS")); // output: true
 
 //10.indexOf() used to find the position (index) of a specific element in an array.It searches the array from left to right and returns the index number of the first match it finds. If it cannot find the item, it returns -1.
+const skills = ["HTML", "CSS", "Javascript", "Bootstrap", "ReactJS"];
+console.log(skills.indexOf("html")); // output: -1
+console.log(skills.indexOf("CSS")); // output: 1
+
+//11.sort() JavaScript's default sorting is based on string-like comparison, so for numbers you should provide a comparison function:
+const numbers = [6,2,4,1,5,7];
+numbers.sort((a, b) => a - b);
+console.log(numbers); // output: [ 1, 2, 4, 5, 6, 7 ]
+
+const skills = ['HTML', 'CSS', 'Bootstrap', 'Javascript', 'ReactJS'];
+skills.sort();
+console.log(skills); // output: [ 'Bootstrap', 'CSS', 'HTML', 'Javascript', 'ReactJS' ]
+
+//12.reverse();
+const numbers = [1,2,3,4,5];
+console.log(numbers.reverse()); //output: [ 5, 4, 3, 2, 1 ]
+
