@@ -133,3 +133,20 @@ console.log(skills); // output: [ 'Bootstrap', 'CSS', 'HTML', 'Javascript', 'Rea
 const numbers = [1,2,3,4,5];
 console.log(numbers.reverse()); //output: [ 5, 4, 3, 2, 1 ]
 
+//13.slice() — Copy a Portion. the end index is excluded:
+const skills = ['HTML', 'CSS', 'Bootstrap', 'Javascript', 'ReactJS'];
+console.log(skills.slice(0,2)); //output: [ 'HTML', 'CSS' ]
+
+//14.splice() — Add/Remove Items
+const skills = ['HTML', 'CSS', 'Bootstrap', 'Javascript', 'ReactJS'];
+console.log(skills.splice(0,3)); //output: [ 'HTML', 'CSS', 'Bootstrap' ]
+
+//15.push(). Adds an item to the end.
+const skills = ['HTML', 'CSS', 'Bootstrap'];
+skills.push('javascript')
+console.log(skills); //output: [ 'HTML', 'CSS', 'Bootstrap', 'javascript' ]
+
+//16.pop().Removes the last item
+const technologies = ['HTML', 'CSS', 'Bootstrap'];
+technologies.pop()
+console.log(technologies); //output: [ 'HTML', 'CSS' ]
