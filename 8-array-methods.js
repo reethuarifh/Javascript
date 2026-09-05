@@ -1,6 +1,22 @@
 //Array
   ↓
 //Array Methods
+  ↓
+//mutating methods and non-mutating methods
+  ↓
+//mutating methods
+  ↓
+//├── push()
+//├── pop()
+//├── shift()
+//├── unshift()
+//├── splice()
+//├── sort()
+//├── reverse()
+//├── fill()
+
+//non-mutating methods
+  ↓
 //├── forEach()
 //├── map()
 //├── filter()
@@ -11,10 +27,8 @@
 //├── reduce()
 //├── includes()
 //├── indexOf()
-//├── sort()
-//├── reverse()
 //├── slice()
-//└── splice()
+
 
 //1.foreach() --> Standard Looping
 //Executes a callback function once for every element. It does not generate a new array. It is strictly used to trigger actions (like executing a DOM change or printing logs).
@@ -150,3 +164,20 @@ console.log(skills); //output: [ 'HTML', 'CSS', 'Bootstrap', 'javascript' ]
 const technologies = ['HTML', 'CSS', 'Bootstrap'];
 technologies.pop()
 console.log(technologies); //output: [ 'HTML', 'CSS' ]
+
+//17.shift().Removes the first element from the array.
+const skills = ['HTML', 'CSS', 'Bootstrap'];
+const removedskills= skills.shift();
+console.log(removedskills); //HTML
+
+//18.unshift().Adds one or more elements to the beginning of the array.
+const skill = ['HTML', 'CSS', 'Bootstrap'];
+skill.unshift('javascript','reactJS');
+console.log(skill); // output:[ 'javascript', 'reactJS', 'HTML', 'CSS', 'Bootstrap' ]
+
+//19.fill() is an array method that replaces all or a specified range of elements in an existing array with a given value. It mutates the original array.
+//array.fill(value, start, end);
+//value → what to insert, start → where to start, end   → where to stop (not included)
+const arr = [1, 2, 3, 4, 5];
+arr.fill(0, 1, 4);
+console.log(arr); // output: [ 1, 0, 0, 0, 5 ]
