@@ -67,3 +67,25 @@ const count = fruits.reduce((sum, total)=>{
     return sum;
 },{});
 console.log(count); //output: { Apple: 3, Banana: 2, Orange: 1 }
+
+//Example 5: reduce() to Group Data
+const employees = [
+    { name: "Rahul", department: "UI" },
+    { name: "Reethu", department: "React" },
+    { name: "John", department: "UI" },
+    { name: "Sam", department: "Testing" }
+];
+
+const list = employees.reduce((result, employee)=>{
+    const department = employee.department;
+
+    if(!result[department]) {
+        result[department] = [];
+    }
+
+    result[department].push(employee.name);
+
+    return result; 
+},{});
+
+console.log(list) // output: { UI: [ 'Rahul', 'John' ], React: [ 'Reethu' ], Testing: [ 'Sam' ] }
