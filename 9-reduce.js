@@ -89,3 +89,58 @@ const list = employees.reduce((result, employee)=>{
 },{});
 
 console.log(list) // output: { UI: [ 'Rahul', 'John' ], React: [ 'Reethu' ], Testing: [ 'Sam' ] }
+
+//Example 6: reduce() to Create an Object From an Array
+const users = [
+    { id: 101, name: "Rahul" },
+    { id: 102, name: "Reethu" },
+    { id: 103, name: "John" }
+];
+
+const result = users.reduce((result, user)=>{
+    result[user.id] = user.name;
+    return result;
+},{})
+console.log(result) //output: { '101': 'Rahul', '102': 'Reethu', '103': 'John' }
+
+//Example 7: reduce() to Calculate Average
+
+const marks = [8, 9, 7, 6];
+const total = marks.reduce((sum,num)=>sum+num, 0);
+const Average = total/marks.length;
+console.log(Average); //output: 7.5
+
+//Example 8: Real-Time Cart With Discount 
+
+const cart = [
+    { name: "Laptop", price: 70000, quantity: 1 },
+    { name: "Mouse", price: 1000, quantity: 2 },
+    { name: "Keyboard", price: 2000, quantity: 1 }
+];
+const subTotal = cart.reduce((sum, item)=> sum + item.price * item.quantity,0);
+console.log(`MRP : ${subTotal}`);
+const Discount = subTotal * 20/100;
+console.log(`Discount: ${Discount}`);
+const totalAmount = subTotal-Discount;
+console.log(`Total: ${totalAmount}`); // output: MRP : 74000 Discount: 14800 Total: 59200
+
+//Example 9: Calculate the total price of all in-stock products.
+const products = [
+    { name: "Laptop", price: 70000, inStock: true },
+    { name: "Phone", price: 30000, inStock: false },
+    { name: "Mouse", price: 1000, inStock: true },
+    { name: "Keyboard", price: 2000, inStock: true }
+];
+
+const totalPrice = products.filter(product=> product.inStock).reduce((sum,product)=>sum+product.price,0);
+console.log(totalPrice); //output: 73000
+
+//Example 10: 
+
+
+
+
+
+
+
+
