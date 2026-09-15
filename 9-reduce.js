@@ -135,7 +135,16 @@ const products = [
 const totalPrice = products.filter(product=> product.inStock).reduce((sum,product)=>sum+product.price,0);
 console.log(totalPrice); //output: 73000
 
-//Example 10: 
+//Example 10: Another Real-Time Dashboard Example. Suppose an API returns orders:
+const orders = [
+    { id: 1, status: "Completed", amount: 5021 },
+    { id: 2, status: "Pending", amount: 2000 },
+    { id: 3, status: "Completed", amount: 3040 },
+    { id: 4, status: "Cancelled", amount: 1000 }
+];
+const completedOrders = orders.filter(order => order.status === "Completed")
+.reduce((total, order)=>total+order.amount,0);
+console.log(completedOrders);//output: 8061
 
 
 
