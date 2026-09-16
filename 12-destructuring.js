@@ -71,7 +71,25 @@ const skills = ["HTML", "CSS", "JavaScript", "React"];
 const [first, ,third] = skills;
 console.log(first, third); //output: HTML JavaScript
 
+-------------------------------------------------
+Example 3: Rest in Array Destructuring
+-------------------------------------------------
+    
+const skills = ["HTML", "CSS", "JavaScript", "React"];
+const [first, ...remaining] = skills;
+console.log(first, remaining); //output: HTML [ 'CSS', 'JavaScript', 'React' ]
 
-
-
+-------------------------------------------------
+Example 4: Real-Time API Example
+-------------------------------------------------
+const response = {
+    status: "success",
+    message: "user fetched",
+    data:[
+        {id:1, name: "Reethu"},
+        {id:2, name: "Arif"},
+    ]
+};
+const {status, message, data} = response;
+console.log(status, message, data); //output: success user fetched [ { id: 1, name: 'Reethu' }, { id: 2, name: 'Arif' } ]
     
