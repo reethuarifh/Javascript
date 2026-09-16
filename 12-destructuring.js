@@ -93,3 +93,18 @@ const response = {
 const {status, message, data} = response;
 console.log(status, message, data); //output: success user fetched [ { id: 1, name: 'Reethu' }, { id: 2, name: 'Arif' } ]
     
+--------------------------------------------------
+//Example 5: 
+--------------------------------------------------
+    
+const user = {
+    name: "Arif",
+    age: 36,
+    city: "Hyderabad"
+};
+function displayUser({name, age}) {
+    console.log(name);
+    console.log(age);
+}
+displayUser(user); //output: Arif 36
+
