@@ -1,8 +1,9 @@
 //Object and Array Destructuring is a modern JavaScript feature (introduced in ES6) that allows you to unpack values from arrays or properties from objects and assign them to distinct variables in a single, clean line of code.
 
 1. Object Destructuring
-
+---------------------------------
 Example:1
+---------------------------------
 const user = {
     name: "Reethu",
     age: 22,
@@ -20,6 +21,13 @@ console.log(city); //output: Hyderabad
 (with destructuring)
 const {name, age, city} = user;
 console.log(name); //output: Reethu
-
-
+---------------------------------
+Example:2
+---------------------------------
+const user = {
+    name: "Reethu",
+    age: 22,
+};
+const {name, age, city="hyderabad"} = user;
+console.log(city); //output: hyderabad
 
