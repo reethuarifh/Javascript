@@ -109,6 +109,16 @@ function displayUser({name, age}) {
 displayUser(user); //output: Arif 36
 
 --------------------------------------------------
-//Example 6:
+//Example 6: Arrow Function + Object Destructuring
 --------------------------------------------------
+
+const userDetails = {
+    name: 'Arif',
+    age: 36,
+    city: 'Hyderabad'
+}
+const user=({name, age, city})=>{
+    return`Hi, I am ${name} my age is ${age} and I am from ${city}`
+}
+console.log(user(userDetails));//output: Hi, I am Arif my age is 36 and I am from Hyderabad
 
