@@ -143,3 +143,19 @@ const products = [
 
 const total = products.map(({price})=> price).filter(product => product > 5000);
 console.log(total); //output: [7000]
+
+--------------------------------------------------
+Example 9: Destructuring With reduce()
+--------------------------------------------------
+const cart = [
+    { name: "Laptop", price: 70000 },
+    { name: "Mouse", price: 1000 },
+    { name: "Keyboard", price: 2000 }
+];
+
+const total = cart.reduce(
+    (sum, { price }) => sum + price,
+    0
+);
+
+console.log(total);
