@@ -94,7 +94,7 @@ const {status, message, data} = response;
 console.log(status, message, data); //output: success user fetched [ { id: 1, name: 'Reethu' }, { id: 2, name: 'Arif' } ]
     
 --------------------------------------------------
-//Example 5: 
+Example 5: 
 --------------------------------------------------
     
 const user = {
@@ -109,7 +109,7 @@ function displayUser({name, age}) {
 displayUser(user); //output: Arif 36
 
 --------------------------------------------------
-//Example 6: Arrow Function + Object Destructuring
+Example 6: Arrow Function + Object Destructuring
 --------------------------------------------------
 
 const userDetails = {
@@ -122,3 +122,12 @@ const user=({name, age, city})=>{
 }
 console.log(user(userDetails));//output: Hi, I am Arif my age is 36 and I am from Hyderabad
 
+----------------------------------------------------
+example 7: Array of Objects + map() + Destructuring
+----------------------------------------------------
+const users = [
+    { id: 1, name: "Rahul", city: "Hyderabad" },
+    { id: 2, name: "Reethu", city: "Bangalore" }
+];
+const details = users.map(({name, city})=>({name, city}));
+console.log(details); //output: [{ name: 'Rahul', city: 'Hyderabad' },{ name: 'Reethu', city: 'Bangalore' }]
