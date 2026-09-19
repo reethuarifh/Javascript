@@ -123,7 +123,7 @@ const user=({name, age, city})=>{
 console.log(user(userDetails));//output: Hi, I am Arif my age is 36 and I am from Hyderabad
 
 ----------------------------------------------------
-example 7: Array of Objects + map() + Destructuring
+Example 7: Array of Objects + map() + Destructuring
 ----------------------------------------------------
 const users = [
     { id: 1, name: "Rahul", city: "Hyderabad" },
@@ -131,3 +131,15 @@ const users = [
 ];
 const details = users.map(({name, city})=>({name, city}));
 console.log(details); //output: [{ name: 'Rahul', city: 'Hyderabad' },{ name: 'Reethu', city: 'Bangalore' }]
+
+---------------------------------------------------
+Example 8:
+---------------------------------------------------
+const products = [
+    { name: "Laptop", price: 70000 },
+    { name: "Mouse", price: 1000 },
+    { name: "Keyboard", price: 2000 }
+];
+
+const total = products.map(({price})=> price).filter(product => product > 5000);
+console.log(total); //output: [7000]
