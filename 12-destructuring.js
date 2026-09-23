@@ -138,11 +138,14 @@ Example 8:
 const products = [
     { name: "Laptop", price: 70000 },
     { name: "Mouse", price: 1000 },
-    { name: "Keyboard", price: 2000 }
+    { name: "Keyboard", price: 2000 },
+    { name: "Ipad", price: 8000 },
+    { name: "Iphone", price: 12000 },
+
 ];
 
 const total = products.map(({price})=> price).filter(product => product > 5000);
-console.log(total); //output: [7000]
+console.log(total); //output: [ 70000, 1000, 2000, 8000, 12000 ]
 
 --------------------------------------------------
 Example 9: Destructuring With reduce()
