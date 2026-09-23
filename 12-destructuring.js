@@ -155,10 +155,26 @@ const cart = [
     { name: "Mouse", price: 1000 },
     { name: "Keyboard", price: 2000 }
 ];
-
 const total = cart.reduce(
     (sum, { price }) => sum + price,
     0
 );
+console.log(total); //output: 73000
 
-console.log(total);
+--------------------------------------------------
+Example 10: Swapping Variables
+--------------------------------------------------
+let a = 10;
+let b = 20;
+[a,b]=[b,a];
+console.log(a, b); //output: 20 10
+
+--------------------------------------------------
+Example 11: Destructuring with const and let
+--------------------------------------------------
+const user = {username:"Arif", age: 36}; //here we cant change const username directly
+let {username} = user;
+username = "Mohammad Arif";
+console.log(username); //output: Mohammad Arif
+console.log(user.username); //output: Arif
+
