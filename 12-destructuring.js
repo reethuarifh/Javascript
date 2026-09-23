@@ -178,3 +178,17 @@ username = "Mohammad Arif";
 console.log(username); //output: Mohammad Arif
 console.log(user.username); //output: Arif
 
+--------------------------------------------------
+Example 12: Nested Array Destructuring
+--------------------------------------------------
+const data = [
+    ["Arifh", 36],
+    ["Reethu", 31],
+    ["sony", 29],
+    ["sameer", 27],
+];
+
+const [[name1, age1], ...remainingUsers] = data;
+
+console.log(name1, age1); //output: Arifh 36
+console.log(remainingUsers); //output: [ [ 'Reethu', 31 ], [ 'sony', 29 ], [ 'sameer', 27 ] ]
