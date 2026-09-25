@@ -32,7 +32,7 @@ console.log(newSkills); //output: [ 'html', 'css', 'javascript', 'Bootstrap', 'R
 -------------------------------
 const user = {
     name: "Reethu",
-    age: "31",
+    age: 31,
     city: "Hyd"
 };
 const userDetails = {...user};
@@ -48,7 +48,7 @@ console.log({...user}); //output: { name: 'Reethu', age: '31', city: 'Hyd' }
 ----------------------------------
 const user = {
     name: "Reethu",
-    age: "31",
+    age: 31,
     city: "Hyd"
 };
 const userDetails = {
@@ -57,5 +57,24 @@ const userDetails = {
 }
 console.log(userDetails); // output: { name: 'Reethu', age: '31', city: 'Hyd', designation: 'UI Developer' }
 
+6)Update an Object Property
+const user = {
+    name: "Reethu",
+    age: 31,
+    city: "Hyd"
+};
+//JavaScript processes left to right. The later property overrides the earlier one.
+const userDetails = {
+    ...user,
+    age: 30
+}
+console.log(userDetails); // output: { name: 'Reethu', age: 30, city: 'Hyd' }
+
+const details = {
+    age: 30,
+    ...user
+}
+//age will not change but it changes the position
+console.log(details); // output: { age: 31, name: 'Reethu', city: 'Hyd' }
 
 
