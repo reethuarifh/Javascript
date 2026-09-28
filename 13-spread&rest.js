@@ -58,6 +58,7 @@ const userDetails = {
 console.log(userDetails); // output: { name: 'Reethu', age: '31', city: 'Hyd', designation: 'UI Developer' }
 
 6)Update an Object Property
+-------------------------------
 const user = {
     name: "Reethu",
     age: 31,
@@ -77,4 +78,27 @@ const details = {
 //age will not change but it changes the position
 console.log(details); // output: { age: 31, name: 'Reethu', city: 'Hyd' }
 
+7)Nested Object
+----------------------------
+const user = {
+    name: "reethu",
+    age: 31,
+    address: {
+        city: "Hyderabad",
+        state: "Telangana"
+    }
+}
+const userDetails= {...user};
+console.log(userDetails); //output: {name: 'reethu', age: 31,address: { city: 'Hyderabad', state: 'Telangana' }}
 
+const userUpdate = {
+    ...user,
+    address: {
+        ...user.address,
+        city: "GDK"
+    }
+    
+}
+console.log({...userUpdate}); //output: //output: {name: 'reethu', age: 31,address: { city: 'GDK', state: 'Telangana' }}
+
+8)Spread With Array of Objects
