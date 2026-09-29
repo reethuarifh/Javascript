@@ -112,6 +112,8 @@ const updatedEmployees = [
 ];
 console.log(...updatedEmployees); // output: { id: 1, name: 'Rahul' } { id: 2, name: 'Reethu' } { id: 3, name: 'John' }
 
+
+
 9)Remove an Item From an Array
 const employees = [
     { id: 1, name: "Rahul" },
