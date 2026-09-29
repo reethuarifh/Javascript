@@ -102,3 +102,21 @@ const userUpdate = {
 console.log({...userUpdate}); //output: //output: {name: 'reethu', age: 31,address: { city: 'GDK', state: 'Telangana' }}
 
 8)Spread With Array of Objects
+const employees = [
+    { id: 1, name: "Rahul" },
+    { id: 2, name: "Reethu" }
+];
+const updatedEmployees = [
+    ...employees,
+    { id: 3, name: "John" }
+];
+console.log(...updatedEmployees); // output: { id: 1, name: 'Rahul' } { id: 2, name: 'Reethu' } { id: 3, name: 'John' }
+
+9)Remove an Item From an Array
+const employees = [
+    { id: 1, name: "Rahul" },
+    { id: 2, name: "Reethu" },
+    { id: 3, name: "John" }
+];
+const employeesUpdate = employees.filter(employee=>employee.id !== 2);
+console.log(employeesUpdate); //output: [ { id: 1, name: 'Rahul' }, { id: 3, name: 'John' } ]
