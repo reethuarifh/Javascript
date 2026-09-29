@@ -41,3 +41,19 @@ const skills = [
 const [first, ...remaining] = skills;
 console.log(first, remaining); //output: HTML [ 'CSS', 'JavaScript', 'React' ]
 
+5)React Props
+function EmployeeCard({ name, ...details }) {
+    console.log(name);
+    console.log(details);
+
+    return (name);
+}
+
+const result= EmployeeCard({
+    name:"Rahul",
+    age:28,
+    city:"Hyderabad",
+    designation:"UI Developer"
+})
+
+console.log(result); //output: Rahul { age: 28, city: 'Hyderabad', designation: 'UI Developer' } Rahul
