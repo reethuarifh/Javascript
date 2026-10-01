@@ -112,8 +112,6 @@ const updatedEmployees = [
 ];
 console.log(...updatedEmployees); // output: { id: 1, name: 'Rahul' } { id: 2, name: 'Reethu' } { id: 3, name: 'John' }
 
-
-
 9)Remove an Item From an Array
 const employees = [
     { id: 1, name: "Rahul" },
@@ -122,3 +120,26 @@ const employees = [
 ];
 const employeesUpdate = employees.filter(employee=>employee.id !== 2);
 console.log(employeesUpdate); //output: [ { id: 1, name: 'Rahul' }, { id: 3, name: 'John' } ]
+
+10)Spread is a shallow copy:Copies only the top-level values [INDEX]. Nested objects or arrays are still shared by memory reference [INDEX].
+const user = {
+    name: "Reethu",
+    skills: ['HTML', 'CSS', 'JavaScript']
+}
+const updateUser = {...user};
+updateUser.skills.push('ReactJS');
+console.log(updateUser); //output:{ name: 'Reethu', skills: [ 'HTML', 'CSS', 'JavaScript', 'ReactJS' ] }
+
+11)
+const userDetails = {
+    userName: 'Arifh',
+    address: {
+        city: 'Hyderabad',
+        state: 'Telangana'
+    }
+}
+const updateDetails = {...userDetails};
+
+updateDetails.userName = "MD. Arifh";
+console.log(userDetails.userName); //output: Arifh
+console.log(updateDetails.userName); //output: MD. Arifh
